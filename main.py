@@ -403,14 +403,44 @@ class PinMapper:
         cv2.imshow(self.window_name, display)
 
     def save_pin_locations(self, output_file: str):
-        """Save linked pin locations to a JSON file."""
+        """Save pin locations in the required format."""
         try:
+            # Create the output structure
+            output_data = {
+                "name": DEV_BOARD.replace("-", " "),
+                "type": TYPE[0],  # Remove tuple formatting
+                "digital-pins": {
+                    "id": [],
+                    "reloc": []
+                },
+                "specs": {
+                    "processor": PROCESSOR[0],  # Remove tuple formatting
+                    "clockSpeed": CLOCK_SPEED[0],  # Remove tuple formatting
+                    "voltage": VOLTAGE
+                }
+            }
+
+            # Add all linked pins to both id and reloc lists
+            for pin in self.linked_pins:
+                pin_id = pin["label"]
+                
+                # Add to id list
+                output_data["digital-pins"]["id"].append(pin_id)
+                
+                # Add to reloc list with coordinates
+                reloc_entry = {
+                    "id": pin_id,
+                    "points": [pin["x"], pin["y"]]
+                }
+                output_data["digital-pins"]["reloc"].append(reloc_entry)
+
             print(f"Saving {len(self.linked_pins)} linked pins to {output_file}")
             
             with open(output_file, 'w') as f:
-                json.dump({"pins": self.linked_pins}, f, indent=4)
+                json.dump(output_data, f, indent=2)
+            
             print(f"Pin locations saved to {output_file}")
-            print("Saved pins:", self.linked_pins)
+            
         except Exception as e:
             print(f"Error saving pin locations: {e}")
 
@@ -485,12 +515,19 @@ class PinMapper:
         cv2.destroyAllWindows()
 
 if __name__ == '__main__':
+    
+    DEV_BOARD = "Arduino-UNO"
+    TYPE = ("microcontroller",)  # Fix tuple formatting
+    PROCESSOR = ("ATmega328P",)
+    CLOCK_SPEED = ("16 MHz",)
+    VOLTAGE = "5V"  # Not a tuple
+
     mapper = PinMapper()
     
     # Create directory if it doesn't exist
     os.makedirs("dev-boards", exist_ok=True)
     
-    component_path = "dev-boards/Arduino-UNO.png"
-    json_file = "dev-boards/Arduino-UNO.json"
+    component_path = f"dev-boards/{DEV_BOARD}.png"
+    json_file = f"dev-boards/{DEV_BOARD}.json"
 
     mapper.run(component_path, json_file)
