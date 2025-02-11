@@ -1,49 +1,79 @@
 {
-    "pins": [
-        {
-            "pin_number": 0,
-            "x": 633,
-            "y": 555
-        },
-        {
-            "pin_number": 1,
-            "x": 632,
-            "y": 537
-        },
-        {
-            "pin_number": 2,
-            "x": 632,
-            "y": 517
-        },
-        {
-            "pin_number": 3,
-            "x": 632,
-            "y": 500
-        },
-        {
-            "pin_number": 4,
-            "x": 632,
-            "y": 481
-        },
-        {
-            "pin_number": 5,
-            "x": 632,
-            "y": 463
-        },
-        {
-            "pin_number": 6,
-            "x": 631,
-            "y": 444
-        },
-        {
-            "pin_number": 7,
-            "x": 632,
-            "y": 426
-        },
-        {
-            "pin_number": 8,
-            "x": 631,
-            "y": 397
-        }
+  "name": "Arduino UNO",
+  "type": "microcontroller",
+  "digital-pins": {
+    "id": [
+      "DO/RX",
+      "DV/TX",
+      "D2",
+      "D3",
+      "D4",
+      "DS",
+      "D6",
+      "D7"
+    ],
+    "reloc": [
+      {
+        "id": "DO/RX",
+        "points": [
+          632,
+          554
+        ]
+      },
+      {
+        "id": "DV/TX",
+        "points": [
+          633,
+          536
+        ]
+      },
+      {
+        "id": "D2",
+        "points": [
+          632,
+          518
+        ]
+      },
+      {
+        "id": "D3",
+        "points": [
+          632,
+          499
+        ]
+      },
+      {
+        "id": "D4",
+        "points": [
+          632,
+          480
+        ]
+      },
+      {
+        "id": "DS",
+        "points": [
+          632,
+          462
+        ]
+      },
+      {
+        "id": "D6",
+        "points": [
+          632,
+          444
+        ]
+      },
+      {
+        "id": "D7",
+        "points": [
+          632,
+          426
+        ]
+      }
     ]
+  },
+  "specs": {
+    "processor": "ATmega328P",
+    "clockSpeed": "16 MHz",
+    "voltage": "5V"
+  }
 }
