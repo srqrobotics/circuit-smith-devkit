@@ -527,7 +527,7 @@ if __name__ == '__main__':
     # Create directory if it doesn't exist
     os.makedirs("dev-boards", exist_ok=True)
     
-    component_path = f"dev-boards/{DEV_BOARD}.png"
+    component_path = f"ref/{DEV_BOARD}.png"
     json_file = f"dev-boards/{DEV_BOARD}.json"
 
     mapper.run(component_path, json_file)
