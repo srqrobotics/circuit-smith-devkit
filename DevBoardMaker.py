@@ -6,9 +6,9 @@ class DevBoardMaker:
     def __init__(self):
         self.image = None
         self.mask = None
-        self.window_name = "Dev Board Maker"
+        self.window_name = "Background Removal Tool"
         self.drawing = False
-        self.mode = "crop"  # "crop" or "remove"
+        self.mode = "remove"  # Start directly in remove mode since image is already cropped
         self.rect_start = None
         self.rect_end = None
         self.crop_points = []
@@ -160,21 +160,19 @@ class DevBoardMaker:
             print(f"Error saving image: {e}")
 
     def run(self, input_path: str, output_path: str):
-        """Run the image processing tool."""
+        """Run the background removal tool."""
         if not self.load_image(input_path):
             return
 
         cv2.namedWindow(self.window_name)
         cv2.setMouseCallback(self.window_name, self.mouse_callback)
         
-        print("Controls:")
-        print("- Left click and drag: Crop image (in crop mode) or remove background (in remove mode)")
-        print("- Shift + Left click: Remove similar colors (in remove mode)")
-        print("- Press 'c': Switch to crop mode")
-        print("- Press 'r': Switch to remove background mode")
+        print("\nBackground Removal Controls:")
+        print("- Left click and drag: Remove background")
+        print("- Shift + Left click: Remove similar colors")
         print("- Press 'Ctrl + Z': Undo last action")
-        print("- Press 's': Save image")
-        print("- Press 'ESC': Exit")
+        print("- Press 's': Save and return to pin mapper")
+        print("- Press 'ESC': Cancel and return")
 
         self.update_display()
 
@@ -183,28 +181,21 @@ class DevBoardMaker:
             
             if key == 27:  # ESC
                 break
-            elif key == ord('c'):  # Switch to crop mode
-                self.mode = "crop"
-                print("Switched to crop mode")
-            elif key == ord('r'):  # Switch to remove background mode
-                self.mode = "remove"
-                print("Switched to remove background mode")
             elif key == ord('s'):  # Save
                 self.save_image(output_path)
-            elif key == 26 or (key == ord('z') and (cv2.waitKey(1) & 0xFF == 0)):  # Ctrl + Z
-                self.undo_last_action()
+                break
 
         cv2.destroyAllWindows()
 
 if __name__ == '__main__':
-    DEV_BOARD = "Arduino-UNO"
+    DEV_BOARD = "symbols.jpg"
 
     maker = DevBoardMaker()
     
     # Create output directory if it doesn't exist
     os.makedirs("dev-boards", exist_ok=True)
     
-    input_image = f"ref/{DEV_BOARD}.png"  # Replace with your input image path
+    input_image = f"ref/{DEV_BOARD}"  # Replace with your input image path
     output_image = f"dev-boards/{DEV_BOARD}.png"
     
     maker.run(input_image, output_image)

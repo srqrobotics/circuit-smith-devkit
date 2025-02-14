@@ -25,6 +25,9 @@ class PinMapper:
         
         # Add undo history
         self.history: List[Dict] = []  # Store actions for undo
+        self.crop_rect = None  # Store crop rectangle coordinates
+        self.cropped_image = None  # Store cropped image for background removal
+        self.is_cropped = False
 
     def load_image(self, img_path: str) -> bool:
         """Load the image from the specified path."""
@@ -46,6 +49,13 @@ class PinMapper:
 
     def mouse_callback(self, event, x, y, flags, param):
         """Handle mouse events for zooming, panning and pin selection."""
+        orig_x, orig_y = self.get_original_coordinates(x, y)
+        
+        # Show alignment guides whenever Alt is pressed
+        if flags & cv2.EVENT_FLAG_ALTKEY:
+            self.rect_end = (orig_x, orig_y)
+            self.draw_current_state(flags)
+        
         if event == cv2.EVENT_MOUSEWHEEL:
             # Calculate cursor position relative to image content
             old_zoom = self.zoom_factor
@@ -72,34 +82,44 @@ class PinMapper:
             self.update_display()
         
         elif event == cv2.EVENT_LBUTTONDOWN:
-            if flags & cv2.EVENT_FLAG_SHIFTKEY:  # Shift + Left click to start OCR rectangle
+            if flags & cv2.EVENT_FLAG_SHIFTKEY:  # Shift + Left click for OCR
                 self.drawing_rect = True
-                self.rect_start = self.get_original_coordinates(x, y)
-            elif flags & cv2.EVENT_FLAG_CTRLKEY:  # Ctrl + Left click to start linking rectangle
+                self.rect_start = (orig_x, orig_y)
+            elif flags & cv2.EVENT_FLAG_CTRLKEY:  # Ctrl + Left click for linking
                 self.drawing_rect = True
-                self.rect_start = self.get_original_coordinates(x, y)
+                self.rect_start = (orig_x, orig_y)
+            elif flags & cv2.EVENT_FLAG_ALTKEY:  # Alt + Left click for cropping
+                self.drawing_rect = True
+                self.rect_start = (orig_x, orig_y)
             else:  # Normal left click for pin placement
-                orig_x, orig_y = self.get_original_coordinates(x, y)
-                
-                # Ensure coordinates are within image bounds
-                height, width = self.image.shape[:2]
-                if 0 <= orig_x < width and 0 <= orig_y < height:
-                    pin_data = {
-                        "pin_number": self.current_pin,
-                        "x": orig_x,
-                        "y": orig_y
-                    }
-                    self.pin_locations.append(pin_data)
-                    self.add_to_history("pin", pin_data)  # Add to undo history
-                    print(f"Added pin {self.current_pin} at ({orig_x}, {orig_y})")
-                    self.current_pin += 1
-                    self.draw_current_state()
+                if self.is_cropped:
+                    # Convert coordinates relative to cropped image
+                    x1, y1 = self.crop_rect[0:2]  # Get crop region start coordinates
+                    pin_x = orig_x
+                    pin_y = orig_y
+                    
+                    # Ensure coordinates are within cropped bounds
+                    if (x1 <= orig_x <= self.crop_rect[2] and 
+                        y1 <= orig_y <= self.crop_rect[3]):
+                        pin_data = {
+                            "pin_number": self.current_pin,
+                            "x": pin_x,
+                            "y": pin_y
+                        }
+                        self.pin_locations.append(pin_data)
+                        self.add_to_history("pin", pin_data)
+                        print(f"Added pin {self.current_pin} at ({pin_x}, {pin_y})")
+                        self.current_pin += 1
+                        self.draw_current_state()
+                    else:
+                        print("Pin must be placed within the cropped region")
+                else:
+                    print("Please crop the image first (Alt + Left click and drag)")
         
         elif event == cv2.EVENT_MOUSEMOVE:
             if self.drawing_rect and self.rect_start:
-                # Update rectangle end point while dragging
-                self.rect_end = self.get_original_coordinates(x, y)
-                self.draw_current_state()
+                self.rect_end = (orig_x, orig_y)
+                self.draw_current_state(flags)
             elif flags & cv2.EVENT_FLAG_RBUTTON:  # Right button drag for panning
                 if self.drag_start is not None:
                     dx = x - self.drag_start[0]
@@ -110,10 +130,12 @@ class PinMapper:
         
         elif event == cv2.EVENT_LBUTTONUP:
             if self.drawing_rect and self.rect_start and self.rect_end:
-                if flags & cv2.EVENT_FLAG_SHIFTKEY:  # OCR rectangle
+                if flags & cv2.EVENT_FLAG_SHIFTKEY:  # OCR
                     self.process_ocr_rectangle()
-                elif flags & cv2.EVENT_FLAG_CTRLKEY:  # Linking rectangle
+                elif flags & cv2.EVENT_FLAG_CTRLKEY:  # Linking
                     self.process_linking_rectangle()
+                elif flags & cv2.EVENT_FLAG_ALTKEY:  # Cropping
+                    self.process_crop_rectangle()
                 
                 self.drawing_rect = False
                 self.rect_start = None
@@ -239,10 +261,78 @@ class PinMapper:
         else:
             print("Error: Linking rectangle must contain exactly one pin and one label")
 
-    def draw_current_state(self):
-        """Draw the current state including pins, labels, and rectangles."""
+    def process_crop_rectangle(self):
+        """Process the crop rectangle and wait for pin mapping before background removal."""
+        if not self.rect_start or not self.rect_end:
+            return
+
+        x1, y1 = self.rect_start
+        x2, y2 = self.rect_end
+        
+        # Ensure correct order of coordinates
+        x1, x2 = min(x1, x2), max(x1, x2)
+        y1, y2 = min(y1, y2), max(y1, y2)
+        
+        # Store crop rectangle
+        self.crop_rect = (x1, y1, x2, y2)
+        
+        # Crop the image
+        self.cropped_image = self.image[y1:y2, x1:x2].copy()
+        self.is_cropped = True
+        
+        print("\nCrop area selected!")
+        print("Now map all pins and labels, then press 'b' to start background removal")
+        self.draw_current_state()
+
+    def start_background_removal(self):
+        """Start the background removal process."""
+        if not self.is_cropped:
+            print("Please crop the image first")
+            return
+            
+        # Launch background removal tool
+        from DevBoardMaker import DevBoardMaker
+        maker = DevBoardMaker()
+        
+        # Save temporary image for processing
+        temp_path = "temp_crop.png"
+        cv2.imwrite(temp_path, self.cropped_image)
+        
+        # Run background removal
+        output_path = f"dev-boards/{DEV_BOARD}.png"
+        maker.run(temp_path, output_path)
+        
+        # Clean up temp file
+        if os.path.exists(temp_path):
+            os.remove(temp_path)
+        
+        # Load the processed image back
+        self.cropped_image = cv2.imread(output_path, cv2.IMREAD_UNCHANGED)
+        self.draw_current_state()
+
+    def draw_current_state(self, flags=0):
+        """Draw the current state including crop box, pins, labels, and rectangles."""
         self.display_image = self.image.copy()
         
+        # Draw alignment guides when Alt is pressed
+        if flags & cv2.EVENT_FLAG_ALTKEY and self.rect_end:
+            height, width = self.image.shape[:2]
+            # Draw vertical guide
+            cv2.line(self.display_image, 
+                    (self.rect_end[0], 0), 
+                    (self.rect_end[0], height), 
+                    (0, 0, 255), 1)  # Red line
+            # Draw horizontal guide
+            cv2.line(self.display_image, 
+                    (0, self.rect_end[1]), 
+                    (width, self.rect_end[1]), 
+                    (0, 0, 255), 1)  # Red line
+
+        # Draw crop rectangle if exists
+        if self.is_cropped:
+            x1, y1, x2, y2 = self.crop_rect
+            cv2.rectangle(self.display_image, (x1, y1), (x2, y2), (255, 0, 0), 2)
+
         # Draw unlinked pins
         for pin in self.pin_locations:
             x = pin["x"]
@@ -405,17 +495,23 @@ class PinMapper:
     def save_pin_locations(self, output_file: str):
         """Save pin locations in the required format."""
         try:
+            if not self.is_cropped:
+                raise ValueError("Image must be cropped before saving")
+                
+            if not self.linked_pins:
+                raise ValueError("No pins to save")
+
             # Create the output structure
             output_data = {
                 "name": DEV_BOARD.replace("-", " "),
-                "type": TYPE[0],  # Remove tuple formatting
+                "type": TYPE[0],
                 "digital-pins": {
                     "id": [],
                     "reloc": []
                 },
                 "specs": {
-                    "processor": PROCESSOR[0],  # Remove tuple formatting
-                    "clockSpeed": CLOCK_SPEED[0],  # Remove tuple formatting
+                    "processor": PROCESSOR[0],
+                    "clockSpeed": CLOCK_SPEED[0],
                     "voltage": VOLTAGE
                 }
             }
@@ -424,25 +520,36 @@ class PinMapper:
             for pin in self.linked_pins:
                 pin_id = pin["label"]
                 
+                # Convert coordinates relative to cropped image
+                x1, y1 = self.crop_rect[0:2]
+                rel_x = pin["x"] - x1
+                rel_y = pin["y"] - y1
+                
                 # Add to id list
                 output_data["digital-pins"]["id"].append(pin_id)
                 
-                # Add to reloc list with coordinates
+                # Add to reloc list with coordinates relative to cropped image
                 reloc_entry = {
                     "id": pin_id,
-                    "points": [pin["x"], pin["y"]]
+                    "points": [rel_x, rel_y]
                 }
                 output_data["digital-pins"]["reloc"].append(reloc_entry)
 
             print(f"Saving {len(self.linked_pins)} linked pins to {output_file}")
             
+            # Ensure directory exists
+            os.makedirs(os.path.dirname(output_file), exist_ok=True)
+            
+            # Save the JSON file
             with open(output_file, 'w') as f:
                 json.dump(output_data, f, indent=2)
             
             print(f"Pin locations saved to {output_file}")
+            return True
             
         except Exception as e:
             print(f"Error saving pin locations: {e}")
+            return False
 
     def add_to_history(self, action_type: str, data: Dict):
         """Add an action to the undo history."""
@@ -490,12 +597,13 @@ class PinMapper:
         print("Controls:")
         print("- Mouse wheel: Zoom in/out")
         print("- Right click and drag: Pan image")
-        print("- Left click: Add pin")
+        print("- Alt + Left click and drag: Crop image")
+        print("- Left click: Add pin (after cropping)")
         print("- Shift + Left click and drag: Draw rectangle for OCR")
         print("- Ctrl + Left click and drag: Draw linking rectangle")
+        print("- F: Save pins and proceed to background removal")
         print("- Ctrl + Z: Undo last action")
-        print("- Press 's' to save pins")
-        print("- Press 'ESC' to exit")
+        print("- Press 'ESC': Exit")
 
         # Initial display of the image
         self.update_display()
@@ -504,11 +612,19 @@ class PinMapper:
             key = cv2.waitKey(1) & 0xFF
             
             if key == 27:  # ESC
-                if self.linked_pins:
-                    self.save_pin_locations(output_file)
                 break
-            elif key == ord('s'):  # Save
-                self.save_pin_locations(output_file)
+            elif key == ord('f') or key == ord('F'):  # F key (case insensitive)
+                if self.linked_pins:
+                    try:
+                        self.save_pin_locations(output_file)
+                        print("Pins saved! Opening background removal tool...")
+                        cv2.destroyAllWindows()
+                        self.start_background_removal()
+                        break
+                    except Exception as e:
+                        print(f"Error during save: {e}")
+                else:
+                    print("No pins to save! Please add and link pins first.")
             elif key == 26 or (key == ord('z') and (cv2.waitKey(1) & 0xFF == 0)):  # Ctrl + Z
                 self.undo_last_action()
 
