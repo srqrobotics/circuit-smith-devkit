@@ -59,7 +59,7 @@ def resize_image_and_adjust_coordinates(png_path, json_path, scale_ratio, output
 
 
 if __name__ == '__main__':
-    device = "ultrasonic-SR04"
+    device = "servo-SG90"
     image_path = f"ref/{device}.png"
     json_path = f"ref/{device}.json"
 
