@@ -1,0 +1,69 @@
+{
+    "name": "SD card Module",
+    "type": "Module",
+    "digital-pins": {
+        "id": [
+            "CD",
+            "DO",
+            "GND",
+            "SCK",
+            "VCC",
+            "DI",
+            "CS"
+        ],
+        "reloc": [
+            {
+                "id": "CD",
+                "points": [
+                    235,
+                    28
+                ]
+            },
+            {
+                "id": "DO",
+                "points": [
+                    235,
+                    57
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    235,
+                    87
+                ]
+            },
+            {
+                "id": "SCK",
+                "points": [
+                    235,
+                    117
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    235,
+                    146
+                ]
+            },
+            {
+                "id": "DI",
+                "points": [
+                    235,
+                    177
+                ]
+            },
+            {
+                "id": "CS",
+                "points": [
+                    235,
+                    206
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

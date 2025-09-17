@@ -1,0 +1,45 @@
+{
+    "name": "BME280 Temperature, Humidity, and Pressure Sensor",
+    "type": "sensor",
+    "digital-pins": {
+        "id": [
+            "SDA",
+            "SCL",
+            "GND",
+            "VIN"
+        ],
+        "reloc": [
+            {
+                "id": "SDA",
+                "points": [
+                    20,
+                    127
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    19,
+                    93
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    18,
+                    59
+                ]
+            },
+            {
+                "id": "VIN",
+                "points": [
+                    18,
+                    25
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

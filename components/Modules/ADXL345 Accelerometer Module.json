@@ -1,0 +1,77 @@
+{
+    "name": "ADXL345 Accelerometer Module",
+    "type": "Module",
+    "digital-pins": {
+        "id": [
+            "SCL",
+            "SDA",
+            "SDO",
+            "INT2",
+            "INTI",
+            "CS",
+            "VCC",
+            "GND"
+        ],
+        "reloc": [
+            {
+                "id": "SCL",
+                "points": [
+                    25,
+                    282
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    25,
+                    246
+                ]
+            },
+            {
+                "id": "SDO",
+                "points": [
+                    25,
+                    207
+                ]
+            },
+            {
+                "id": "INT2",
+                "points": [
+                    25,
+                    169
+                ]
+            },
+            {
+                "id": "INTI",
+                "points": [
+                    25,
+                    130
+                ]
+            },
+            {
+                "id": "CS",
+                "points": [
+                    25,
+                    93
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    25,
+                    55
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    25,
+                    16
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

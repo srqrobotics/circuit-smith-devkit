@@ -1,0 +1,61 @@
+{
+    "name": "BMP280 Module",
+    "type": "Sensor",
+    "digital-pins": {
+        "id": [
+            "SDO",
+            "CSB",
+            "SDA",
+            "SCL",
+            "GND",
+            "VCC"
+        ],
+        "reloc": [
+            {
+                "id": "SDO",
+                "points": [
+                    133,
+                    11
+                ]
+            },
+            {
+                "id": "CSB",
+                "points": [
+                    133,
+                    46
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    133,
+                    81
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    133,
+                    116
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    133,
+                    152
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    133,
+                    187
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

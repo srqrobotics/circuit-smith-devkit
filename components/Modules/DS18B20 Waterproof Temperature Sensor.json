@@ -1,0 +1,37 @@
+{
+    "name": "DS18B20 Waterproof Temperature Sensor",
+    "type": "Sensor",
+    "digital-pins": {
+        "id": [
+            "GND",
+            "DQ",
+            "VCC"
+        ],
+        "reloc": [
+            {
+                "id": "GND",
+                "points": [
+                    6,
+                    298
+                ]
+            },
+            {
+                "id": "DQ",
+                "points": [
+                    8,
+                    182
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    7,
+                    65
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "name": "MAX30100 Sensor",
+    "type": "Sensor",
+    "digital-pins": {
+        "id": [
+            "GND",
+            "RLED",
+            "IRLED",
+            "INT",
+            "SDA",
+            "SCL",
+            "VIN"
+        ],
+        "reloc": [
+            {
+                "id": "GND",
+                "points": [
+                    14,
+                    278
+                ]
+            },
+            {
+                "id": "RLED",
+                "points": [
+                    14,
+                    236
+                ]
+            },
+            {
+                "id": "IRLED",
+                "points": [
+                    14,
+                    193
+                ]
+            },
+            {
+                "id": "INT",
+                "points": [
+                    14,
+                    150
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    14,
+                    108
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    14,
+                    66
+                ]
+            },
+            {
+                "id": "VIN",
+                "points": [
+                    14,
+                    23
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

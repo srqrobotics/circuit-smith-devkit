@@ -1,0 +1,45 @@
+{
+    "name": "RF Receiver Module (433 MHz)",
+    "type": "Communication Module",
+    "digital-pins": {
+        "id": [
+            "5V",
+            "DATA_1",
+            "DATA_2",
+            "GND"
+        ],
+        "reloc": [
+            {
+                "id": "5V",
+                "points": [
+                    242,
+                    237
+                ]
+            },
+            {
+                "id": "DATA_1",
+                "points": [
+                    273,
+                    237
+                ]
+            },
+            {
+                "id": "DATA_2",
+                "points": [
+                    304,
+                    237
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    334,
+                    237
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

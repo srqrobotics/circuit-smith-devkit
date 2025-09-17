@@ -1,0 +1,69 @@
+{
+    "name": "MAX6675 Thermocouple Temperature Sensor Module",
+    "type": "Sensor",
+    "digital-pins": {
+        "id": [
+            "TH",
+            "TH",
+            "SO",
+            "CS",
+            "SCK",
+            "VIN",
+            "GND"
+        ],
+        "reloc": [
+            {
+                "id": "TH-",
+                "points": [
+                    80,
+                    49
+                ]
+            },
+            {
+                "id": "TH+",
+                "points": [
+                    80,
+                    150
+                ]
+            },
+            {
+                "id": "SO",
+                "points": [
+                    391,
+                    30
+                ]
+            },
+            {
+                "id": "CS",
+                "points": [
+                    391,
+                    64
+                ]
+            },
+            {
+                "id": "SCK",
+                "points": [
+                    391,
+                    96
+                ]
+            },
+            {
+                "id": "VIN",
+                "points": [
+                    391,
+                    129
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    391,
+                    162
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

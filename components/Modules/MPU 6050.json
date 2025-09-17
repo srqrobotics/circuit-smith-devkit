@@ -1,0 +1,77 @@
+{
+    "name": "MPU 6050",
+    "type": "Gyroscope and accelerometer",
+    "digital-pins": {
+        "id": [
+            "INT",
+            "AD0",
+            "XCL",
+            "XDA",
+            "SDA",
+            "SCL",
+            "GND",
+            "VCC"
+        ],
+        "reloc": [
+            {
+                "id": "INT",
+                "points": [
+                    17,
+                    14
+                ]
+            },
+            {
+                "id": "AD0",
+                "points": [
+                    41,
+                    14
+                ]
+            },
+            {
+                "id": "XCL",
+                "points": [
+                    64,
+                    14
+                ]
+            },
+            {
+                "id": "XDA",
+                "points": [
+                    88,
+                    14
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    111,
+                    14
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    135,
+                    14
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    159,
+                    14
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    182,
+                    14
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "name": "Sound Sensor Module (KY 038)",
+    "type": "Module",
+    "digital-pins": {
+        "id": [
+            "A0",
+            "GND",
+            "5V",
+            "D0"
+        ],
+        "reloc": [
+            {
+                "id": "A0",
+                "points": [
+                    2,
+                    91
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    2,
+                    70
+                ]
+            },
+            {
+                "id": "5V",
+                "points": [
+                    3,
+                    49
+                ]
+            },
+            {
+                "id": "D0",
+                "points": [
+                    3,
+                    28
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

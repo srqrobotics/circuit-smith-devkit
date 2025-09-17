@@ -1,0 +1,45 @@
+{
+    "name": "Flame Sensor Module",
+    "type": "Sensor",
+    "digital-pins": {
+        "id": [
+            "AO",
+            "DO",
+            "GND",
+            "VCC"
+        ],
+        "reloc": [
+            {
+                "id": "AO",
+                "points": [
+                    1,
+                    24
+                ]
+            },
+            {
+                "id": "DO",
+                "points": [
+                    1,
+                    44
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    1,
+                    65
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    1,
+                    85
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

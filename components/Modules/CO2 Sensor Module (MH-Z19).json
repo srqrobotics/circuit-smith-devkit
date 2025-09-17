@@ -1,0 +1,85 @@
+{
+    "name": "CO2 Sensor Module (MH Z19)",
+    "type": "Sensor",
+    "digital-pins": {
+        "id": [
+            "VIN",
+            "GND",
+            "PWM",
+            "NC",
+            "HD",
+            "Tx",
+            "Rx",
+            "V0",
+            "NC"
+        ],
+        "reloc": [
+            {
+                "id": "VIN",
+                "points": [
+                    572,
+                    276
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    573,
+                    229
+                ]
+            },
+            {
+                "id": "PWM",
+                "points": [
+                    572,
+                    134
+                ]
+            },
+            {
+                "id": "NC",
+                "points": [
+                    571,
+                    182
+                ]
+            },
+            {
+                "id": "HD",
+                "points": [
+                    28,
+                    88
+                ]
+            },
+            {
+                "id": "Tx",
+                "points": [
+                    27,
+                    183
+                ]
+            },
+            {
+                "id": "Rx",
+                "points": [
+                    27,
+                    229
+                ]
+            },
+            {
+                "id": "V0",
+                "points": [
+                    27,
+                    275
+                ]
+            },
+            {
+                "id": "NC",
+                "points": [
+                    27,
+                    134
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

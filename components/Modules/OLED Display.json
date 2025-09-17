@@ -1,0 +1,45 @@
+{
+    "name": "OLED Display",
+    "type": "Display",
+    "digital-pins": {
+        "id": [
+            "GND",
+            "VCC",
+            "SCL",
+            "SDA"
+        ],
+        "reloc": [
+            {
+                "id": "GND",
+                "points": [
+                    182,
+                    31
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    227,
+                    31
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    272,
+                    31
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    319,
+                    31
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

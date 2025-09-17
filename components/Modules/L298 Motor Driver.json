@@ -1,0 +1,133 @@
+{
+    "name": "L298 Motor Driver",
+    "type": "Motor Driver",
+    "digital-pins": {
+        "id": [
+            "OUT1",
+            "OUT2",
+            "12V",
+            "GND",
+            "5V",
+            "5V",
+            "ENA",
+            "IN1",
+            "IN2",
+            "IN3",
+            "IN4",
+            "ENB",
+            "5V",
+            "OUT3",
+            "OUT4"
+        ],
+        "reloc": [
+            {
+                "id": "OUT1",
+                "points": [
+                    44,
+                    311
+                ]
+            },
+            {
+                "id": "OUT2",
+                "points": [
+                    44,
+                    366
+                ]
+            },
+            {
+                "id": "12V",
+                "points": [
+                    103,
+                    456
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    157,
+                    456
+                ]
+            },
+            {
+                "id": "5V",
+                "points": [
+                    213,
+                    456
+                ]
+            },
+            {
+                "id": "5V",
+                "points": [
+                    275,
+                    434
+                ]
+            },
+            {
+                "id": "ENA",
+                "points": [
+                    275,
+                    463
+                ]
+            },
+            {
+                "id": "IN1",
+                "points": [
+                    305,
+                    463
+                ]
+            },
+            {
+                "id": "IN2",
+                "points": [
+                    334,
+                    463
+                ]
+            },
+            {
+                "id": "IN3",
+                "points": [
+                    365,
+                    463
+                ]
+            },
+            {
+                "id": "IN4",
+                "points": [
+                    394,
+                    463
+                ]
+            },
+            {
+                "id": "ENB",
+                "points": [
+                    424,
+                    463
+                ]
+            },
+            {
+                "id": "5V",
+                "points": [
+                    424,
+                    435
+                ]
+            },
+            {
+                "id": "OUT3",
+                "points": [
+                    456,
+                    354
+                ]
+            },
+            {
+                "id": "OUT4",
+                "points": [
+                    456,
+                    298
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

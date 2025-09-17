@@ -1,0 +1,141 @@
+{
+    "name": "SX1278 LORA Module",
+    "type": "Communication Module",
+    "digital-pins": {
+        "id": [
+            "DIO3",
+            "DIO2",
+            "DIO1",
+            "DIO0",
+            "RST",
+            "3.3V",
+            "GND_3",
+            "GND_2",
+            "GND_1",
+            "NSS",
+            "MOSI",
+            "MISO",
+            "SCK",
+            "DIO5",
+            "DIO4",
+            "GND_0"
+        ],
+        "reloc": [
+            {
+                "id": "DIO3",
+                "points": [
+                    331,
+                    467
+                ]
+            },
+            {
+                "id": "DIO2",
+                "points": [
+                    286,
+                    467
+                ]
+            },
+            {
+                "id": "DIO1",
+                "points": [
+                    241,
+                    467
+                ]
+            },
+            {
+                "id": "DIO0",
+                "points": [
+                    198,
+                    467
+                ]
+            },
+            {
+                "id": "RST",
+                "points": [
+                    153,
+                    467
+                ]
+            },
+            {
+                "id": "3.3V",
+                "points": [
+                    110,
+                    467
+                ]
+            },
+            {
+                "id": "GND_3",
+                "points": [
+                    65,
+                    467
+                ]
+            },
+            {
+                "id": "GND_2",
+                "points": [
+                    20,
+                    467
+                ]
+            },
+            {
+                "id": "GND_1",
+                "points": [
+                    21,
+                    24
+                ]
+            },
+            {
+                "id": "NSS",
+                "points": [
+                    66,
+                    24
+                ]
+            },
+            {
+                "id": "MOSI",
+                "points": [
+                    110,
+                    24
+                ]
+            },
+            {
+                "id": "MISO",
+                "points": [
+                    156,
+                    24
+                ]
+            },
+            {
+                "id": "SCK",
+                "points": [
+                    199,
+                    24
+                ]
+            },
+            {
+                "id": "DIO5",
+                "points": [
+                    244,
+                    24
+                ]
+            },
+            {
+                "id": "DIO4",
+                "points": [
+                    289,
+                    24
+                ]
+            },
+            {
+                "id": "GND_0",
+                "points": [
+                    332,
+                    24
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "name": "A3144 Hall Effect Sensor Module",
+    "type": "Sensor Module",
+    "digital-pins": {
+        "id": [
+            "A0",
+            "GND",
+            "VCC",
+            "D0"
+        ],
+        "reloc": [
+            {
+                "id": "A0",
+                "points": [
+                    5,
+                    25
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    5,
+                    45
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    5,
+                    64
+                ]
+            },
+            {
+                "id": "D0",
+                "points": [
+                    5,
+                    82
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

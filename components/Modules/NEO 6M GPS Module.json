@@ -1,0 +1,45 @@
+{
+    "name": "NEO 6M GPS Module",
+    "type": "GPS Module",
+    "digital-pins": {
+        "id": [
+            "VCC",
+            "RX",
+            "TX",
+            "GND"
+        ],
+        "reloc": [
+            {
+                "id": "VCC",
+                "points": [
+                    102,
+                    17
+                ]
+            },
+            {
+                "id": "RX",
+                "points": [
+                    132,
+                    17
+                ]
+            },
+            {
+                "id": "TX",
+                "points": [
+                    161,
+                    17
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    191,
+                    17
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

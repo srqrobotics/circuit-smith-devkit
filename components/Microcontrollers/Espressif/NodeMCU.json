@@ -1,0 +1,255 @@
+{
+  "name": "Node MCU",
+  "type": "Microcontoller",
+  "digital-pins": {
+    "id": [
+      "ADCO",
+      "RESERVED",
+      "RESERVED",
+      "GPIO10",
+      "GPIO9",
+      "MOSI",
+      "SCLK",
+      "GND1",
+      "EN",
+      "RST",
+      "MISO",
+      "CS",
+      "3.3V",
+      "GND2",
+      "VIN",
+      "GPIO16",
+      "GPIO9",
+      "GPIO4",
+      "GPIO0",
+      "GPIO2",
+      "3.3V",
+      "GND3",
+      "GPIO14",
+      "GPIO12",
+      "GPIO15",
+      "GPIO13",
+      "GPIO3",
+      "GPIO1",
+      "GND4",
+      "3.3V"
+    ],
+    "reloc": [
+      {
+        "id": "ADCO",
+        "points": [
+          20,
+          112
+        ]
+      },
+      {
+        "id": "RESERVED",
+        "points": [
+          20,
+          157
+        ]
+      },
+      {
+        "id": "RESERVED",
+        "points": [
+          20,
+          201
+        ]
+      },
+      {
+        "id": "GPIO10",
+        "points": [
+          20,
+          246
+        ]
+      },
+      {
+        "id": "GPIO9",
+        "points": [
+          20,
+          291
+        ]
+      },
+      {
+        "id": "MOSI",
+        "points": [
+          20,
+          336
+        ]
+      },
+      {
+        "id": "SCLK",
+        "points": [
+          20,
+          470
+        ]
+      },
+      {
+        "id": "GND1",
+        "points": [
+          20,
+          514
+        ]
+      },
+      {
+        "id": "EN",
+        "points": [
+          20,
+          603
+        ]
+      },
+      {
+        "id": "RST",
+        "points": [
+          20,
+          648
+        ]
+      },
+      {
+        "id": "MISO",
+        "points": [
+          20,
+          425
+        ]
+      },
+      {
+        "id": "CS",
+        "points": [
+          20,
+          380
+        ]
+      },
+      {
+        "id": "3.3V",
+        "points": [
+          20,
+          559
+        ]
+      },
+      {
+        "id": "GND2",
+        "points": [
+          20,
+          693
+        ]
+      },
+      {
+        "id": "VIN",
+        "points": [
+          20,
+          737
+        ]
+      },
+      {
+        "id": "GPIO16",
+        "points": [
+          421,
+          110
+        ]
+      },
+      {
+        "id": "GPIO9",
+        "points": [
+          421,
+          155
+        ]
+      },
+      {
+        "id": "GPIO4",
+        "points": [
+          421,
+          199
+        ]
+      },
+      {
+        "id": "GPIOO",
+        "points": [
+          421,
+          244
+        ]
+      },
+      {
+        "id": "GPIO2",
+        "points": [
+          421,
+          289
+        ]
+      },
+      {
+        "id": "3.3V",
+        "points": [
+          421,
+          334
+        ]
+      },
+      {
+        "id": "GND3",
+        "points": [
+          421,
+          378
+        ]
+      },
+      {
+        "id": "GPIO14",
+        "points": [
+          421,
+          423
+        ]
+      },
+      {
+        "id": "GPIO12",
+        "points": [
+          421,
+          468
+        ]
+      },
+      {
+        "id": "GPIO15",
+        "points": [
+          421,
+          557
+        ]
+      },
+      {
+        "id": "GPIO13",
+        "points": [
+          421,
+          513
+        ]
+      },
+      {
+        "id": "GPIO3",
+        "points": [
+          421,
+          602
+        ]
+      },
+      {
+        "id": "GPIO1",
+        "points": [
+          421,
+          647
+        ]
+      },
+      {
+        "id": "GND4",
+        "points": [
+          421,
+          691
+        ]
+      },
+      {
+        "id": "3.3V",
+        "points": [
+          421,
+          736
+        ]
+      }
+    ]
+  },
+  "specs": {
+    "processor": "esp8266",
+    "clockSpeed": "160 MHz",
+    "voltage": "5V"
+  }
+}

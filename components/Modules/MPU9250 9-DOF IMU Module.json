@@ -1,0 +1,95 @@
+{
+    "name": "MPU9250 9 DOF IMU Module",
+    "type": "Groscope & Accelerometer & Magnetometer",
+    "digital-pins": {
+        "id": [
+            "UCC",
+            "GND",
+            "SCL",
+            "SDA",
+            "EDA",
+            "ECL",
+            "ADO",
+            "INT",
+            "NCS",
+            "FSYNC"
+        ],
+        "reloc": [
+            {
+                "id": "UCC",
+                "points": [
+                    14,
+                    12
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    14,
+                    43
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    14,
+                    73
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    13,
+                    104
+                ]
+            },
+            {
+                "id": "EDA",
+                "points": [
+                    13,
+                    134
+                ]
+            },
+            {
+                "id": "ECL",
+                "points": [
+                    13,
+                    165
+                ]
+            },
+            {
+                "id": "ADO",
+                "points": [
+                    13,
+                    195
+                ]
+            },
+            {
+                "id": "INT",
+                "points": [
+                    13,
+                    225
+                ]
+            },
+            {
+                "id": "NCS",
+                "points": [
+                    13,
+                    256
+                ]
+            },
+            {
+                "id": "FSYNC",
+                "points": [
+                    12,
+                    287
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "processor": "ATmega2560",
+        "clockSpeed": "16 MHz",
+        "voltage": "5V"
+    }
+}

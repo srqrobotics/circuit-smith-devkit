@@ -1,0 +1,77 @@
+{
+    "name": "RFID RC522",
+    "type": "Motor Driver",
+    "digital-pins": {
+        "id": [
+            "SDA",
+            "SCK",
+            "MOSI",
+            "MISO",
+            "IRQ",
+            "GND",
+            "RST",
+            "3.3V"
+        ],
+        "reloc": [
+            {
+                "id": "_PIN",
+                "points": [
+                    12,
+                    186
+                ]
+            },
+            {
+                "id": "4",
+                "points": [
+                    12,
+                    169
+                ]
+            },
+            {
+                "id": "4",
+                "points": [
+                    12,
+                    153
+                ]
+            },
+            {
+                "id": "_PIN",
+                "points": [
+                    12,
+                    135
+                ]
+            },
+            {
+                "id": "_PIN",
+                "points": [
+                    12,
+                    118
+                ]
+            },
+            {
+                "id": "7P",
+                "points": [
+                    12,
+                    101
+                ]
+            },
+            {
+                "id": "XO",
+                "points": [
+                    12,
+                    84
+                ]
+            },
+            {
+                "id": "SF",
+                "points": [
+                    12,
+                    66
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "3.3V"
+    }
+}

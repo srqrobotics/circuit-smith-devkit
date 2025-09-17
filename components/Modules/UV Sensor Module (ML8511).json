@@ -1,0 +1,45 @@
+{
+    "name": "UV Sensor Module (ML8511)",
+    "type": "Module",
+    "digital-pins": {
+        "id": [
+            "3.3V",
+            "GND",
+            "OUT",
+            "EN"
+        ],
+        "reloc": [
+            {
+                "id": "3.3V",
+                "points": [
+                    17,
+                    188
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    17,
+                    146
+                ]
+            },
+            {
+                "id": "OUT",
+                "points": [
+                    17,
+                    102
+                ]
+            },
+            {
+                "id": "EN",
+                "points": [
+                    17,
+                    60
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

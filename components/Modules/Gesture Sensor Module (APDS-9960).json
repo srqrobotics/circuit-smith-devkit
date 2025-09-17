@@ -1,0 +1,61 @@
+{
+    "name": "Gesture Sensor Module (APDS 9960)",
+    "type": "Sensor",
+    "digital-pins": {
+        "id": [
+            "INT",
+            "SCL",
+            "SDA",
+            "VCC",
+            "VL",
+            "GND"
+        ],
+        "reloc": [
+            {
+                "id": "INT",
+                "points": [
+                    158,
+                    215
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    128,
+                    215
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    99,
+                    215
+                ]
+            },
+            {
+                "id": "UCC",
+                "points": [
+                    70,
+                    215
+                ]
+            },
+            {
+                "id": "VL",
+                "points": [
+                    11,
+                    215
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    41,
+                    215
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

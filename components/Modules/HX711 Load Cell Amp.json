@@ -1,0 +1,45 @@
+{
+    "name": "HX711 Load Cell Amp",
+    "type": "Load Cell Amp",
+    "digital-pins": {
+        "id": [
+            "VCC",
+            "SCK",
+            "DT",
+            "GND"
+        ],
+        "reloc": [
+            {
+                "id": "VCC",
+                "points": [
+                    16,
+                    122
+                ]
+            },
+            {
+                "id": "SCK",
+                "points": [
+                    16,
+                    101
+                ]
+            },
+            {
+                "id": "DT",
+                "points": [
+                    16,
+                    79
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    16,
+                    58
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

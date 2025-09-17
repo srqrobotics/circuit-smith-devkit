@@ -1,0 +1,141 @@
+{
+    "name": "DFPlayer Mini MP3 Player Module",
+    "type": "sensor",
+    "digital-pins": {
+        "id": [
+            "VCC",
+            "RX",
+            "TX",
+            "DAC_R",
+            "DAC_I",
+            "SPK_1",
+            "GND",
+            "SPK_2",
+            "BUSY",
+            "USB-",
+            "USB+",
+            "ADKEY_2",
+            "ADKEY_1",
+            "IO_2",
+            "GND",
+            "IO_1"
+        ],
+        "reloc": [
+            {
+                "id": "VCC",
+                "points": [
+                    20,
+                    30
+                ]
+            },
+            {
+                "id": "RX",
+                "points": [
+                    20,
+                    71
+                ]
+            },
+            {
+                "id": "TX",
+                "points": [
+                    20,
+                    111
+                ]
+            },
+            {
+                "id": "DAC_R",
+                "points": [
+                    20,
+                    153
+                ]
+            },
+            {
+                "id": "DAC_I",
+                "points": [
+                    20,
+                    192
+                ]
+            },
+            {
+                "id": "SPK_1",
+                "points": [
+                    20,
+                    232
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    20,
+                    273
+                ]
+            },
+            {
+                "id": "SPK_2",
+                "points": [
+                    20,
+                    313
+                ]
+            },
+            {
+                "id": "BUSY",
+                "points": [
+                    327,
+                    30
+                ]
+            },
+            {
+                "id": "USB-",
+                "points": [
+                    327,
+                    71
+                ]
+            },
+            {
+                "id": "USB+",
+                "points": [
+                    327,
+                    113
+                ]
+            },
+            {
+                "id": "ADKEY_2",
+                "points": [
+                    327,
+                    153
+                ]
+            },
+            {
+                "id": "ADKEY_1",
+                "points": [
+                    327,
+                    192
+                ]
+            },
+            {
+                "id": "IO_2",
+                "points": [
+                    327,
+                    232
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    327,
+                    273
+                ]
+            },
+            {
+                "id": "IO_1",
+                "points": [
+                    327,
+                    313
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

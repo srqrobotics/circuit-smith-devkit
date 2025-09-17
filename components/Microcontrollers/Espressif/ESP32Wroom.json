@@ -1,0 +1,319 @@
+{
+  "name": "ESP32 Wroom",
+  "type": "Microcontoller",
+  "digital-pins": {
+    "id": [
+      "3V3",
+      "EN",
+      "GPIO36",
+      "GPIO39",
+      "GPIO34",
+      "GPIO33",
+      "GPIO35",
+      "GPIO32",
+      "GPIO26",
+      "GPIO25",
+      "GPIO27",
+      "GPIO14",
+      "GPIO12",
+      "GND1",
+      "GPIO13",
+      "GPIO9",
+      "GPIO10",
+      "GPIO11",
+      "5V0",
+      "GND2",
+      "GPIO23",
+      "GPIO22",
+      "GPIO1",
+      "GPIO3",
+      "GPIO21",
+      "GND3",
+      "GPIO19",
+      "GPIO18",
+      "GPIO5",
+      "GPIO17",
+      "GPIO16",
+      "GPIO4",
+      "GPIO0",
+      "GPIO8",
+      "GPIO2",
+      "GPIO15",
+      "GPIO7",
+      "GPIO6"
+    ],
+    "reloc": [
+      {
+        "id": "3V3",
+        "points": [
+          12,
+          68
+        ]
+      },
+      {
+        "id": "EN",
+        "points": [
+          12,
+          93
+        ]
+      },
+      {
+        "id": "GPIO36",
+        "points": [
+          12,
+          117
+        ]
+      },
+      {
+        "id": "GPIO39",
+        "points": [
+          12,
+          141
+        ]
+      },
+      {
+        "id": "GPIO34",
+        "points": [
+          12,
+          165
+        ]
+      },
+      {
+        "id": "GPIO33",
+        "points": [
+          12,
+          237
+        ]
+      },
+      {
+        "id": "GPIO35",
+        "points": [
+          12,
+          189
+        ]
+      },
+      {
+        "id": "GPIO32",
+        "points": [
+          12,
+          213
+        ]
+      },
+      {
+        "id": "GPIO26",
+        "points": [
+          12,
+          285
+        ]
+      },
+      {
+        "id": "GPIO25",
+        "points": [
+          12,
+          261
+        ]
+      },
+      {
+        "id": "GPIO27",
+        "points": [
+          12,
+          309
+        ]
+      },
+      {
+        "id": "GPIO14",
+        "points": [
+          12,
+          333
+        ]
+      },
+      {
+        "id": "GPIO12",
+        "points": [
+          12,
+          357
+        ]
+      },
+      {
+        "id": "GND1",
+        "points": [
+          12,
+          381
+        ]
+      },
+      {
+        "id": "GPIO13",
+        "points": [
+          12,
+          405
+        ]
+      },
+      {
+        "id": "GPIO9",
+        "points": [
+          12,
+          429
+        ]
+      },
+      {
+        "id": "GPIO10",
+        "points": [
+          12,
+          453
+        ]
+      },
+      {
+        "id": "GPIO11",
+        "points": [
+          12,
+          477
+        ]
+      },
+      {
+        "id": "5V0",
+        "points": [
+          12,
+          501
+        ]
+      },
+      {
+        "id": "GND2",
+        "points": [
+          252,
+          68
+        ]
+      },
+      {
+        "id": "GPIO23",
+        "points": [
+          252,
+          93
+        ]
+      },
+      {
+        "id": "GPIO22",
+        "points": [
+          252,
+          117
+        ]
+      },
+      {
+        "id": "GPIO1",
+        "points": [
+          252,
+          141
+        ]
+      },
+      {
+        "id": "GPIO3",
+        "points": [
+          252,
+          165
+        ]
+      },
+      {
+        "id": "GPIO21",
+        "points": [
+          252,
+          189
+        ]
+      },
+      {
+        "id": "GND3",
+        "points": [
+          252,
+          213
+        ]
+      },
+      {
+        "id": "GPIO19",
+        "points": [
+          252,
+          237
+        ]
+      },
+      {
+        "id": "GPIO18",
+        "points": [
+          252,
+          261
+        ]
+      },
+      {
+        "id": "GPIO5",
+        "points": [
+          252,
+          285
+        ]
+      },
+      {
+        "id": "GP1017",
+        "points": [
+          252,
+          309
+        ]
+      },
+      {
+        "id": "GPIO16",
+        "points": [
+          252,
+          333
+        ]
+      },
+      {
+        "id": "GPIO4",
+        "points": [
+          252,
+          357
+        ]
+      },
+      {
+        "id": "GPIO0",
+        "points": [
+          252,
+          381
+        ]
+      },
+      {
+        "id": "GPIO8",
+        "points": [
+          252,
+          453
+        ]
+      },
+      {
+        "id": "GPIO2",
+        "points": [
+          252,
+          405
+        ]
+      },
+      {
+        "id": "GPIO15",
+        "points": [
+          252,
+          429
+        ]
+      },
+      {
+        "id": "GPIO7",
+        "points": [
+          252,
+          477
+        ]
+      },
+      {
+        "id": "GPIO6",
+        "points": [
+          252,
+          501
+        ]
+      }
+    ]
+  },
+  "specs": {
+    "processor": "ESP32-D0WDQ6",
+    "clockSpeed": "240 MHz",
+    "voltage": "5V"
+  }
+}

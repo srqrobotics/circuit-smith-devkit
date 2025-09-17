@@ -1,0 +1,93 @@
+{
+    "name": "TCS3200 Color Detection Sensor Module",
+    "type": "Module",
+    "digital-pins": {
+        "id": [
+            "GND_1",
+            "OUT",
+            "S2",
+            "S3",
+            "VCC_1",
+            "GND_2",
+            "LED",
+            "S0",
+            "S1",
+            "VCC_2"
+        ],
+        "reloc": [
+            {
+                "id": "GND_1",
+                "points": [
+                    142,
+                    340
+                ]
+            },
+            {
+                "id": "OUT",
+                "points": [
+                    172,
+                    340
+                ]
+            },
+            {
+                "id": "S2",
+                "points": [
+                    202,
+                    340
+                ]
+            },
+            {
+                "id": "S3",
+                "points": [
+                    233,
+                    340
+                ]
+            },
+            {
+                "id": "VCC_1",
+                "points": [
+                    263,
+                    340
+                ]
+            },
+            {
+                "id": "GND_2",
+                "points": [
+                    142,
+                    35
+                ]
+            },
+            {
+                "id": "LED",
+                "points": [
+                    172,
+                    35
+                ]
+            },
+            {
+                "id": "S0",
+                "points": [
+                    202,
+                    35
+                ]
+            },
+            {
+                "id": "S1",
+                "points": [
+                    233,
+                    35
+                ]
+            },
+            {
+                "id": "VCC_2",
+                "points": [
+                    264,
+                    35
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

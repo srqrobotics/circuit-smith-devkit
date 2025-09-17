@@ -1,0 +1,53 @@
+{
+    "name": "HMC5883L",
+    "type": "Magnetometer Module",
+    "digital-pins": {
+        "id": [
+            "VCC",
+            "GND",
+            "SCL",
+            "SDA",
+            "DRDY"
+        ],
+        "reloc": [
+            {
+                "id": "VCC",
+                "points": [
+                    205,
+                    22
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    205,
+                    52
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    205,
+                    82
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    205,
+                    112
+                ]
+            },
+            {
+                "id": "DRDY",
+                "points": [
+                    205,
+                    142
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

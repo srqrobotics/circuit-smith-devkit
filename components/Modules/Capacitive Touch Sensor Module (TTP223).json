@@ -1,0 +1,37 @@
+{
+    "name": "Capacitive Touch Sensor Module (TTP223)",
+    "type": "sensor",
+    "digital-pins": {
+        "id": [
+            "GND",
+            "VCC",
+            "SIG"
+        ],
+        "reloc": [
+            {
+                "id": "GND",
+                "points": [
+                    84,
+                    254
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    109,
+                    254
+                ]
+            },
+            {
+                "id": "SIG",
+                "points": [
+                    132,
+                    254
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

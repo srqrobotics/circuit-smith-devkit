@@ -1,0 +1,157 @@
+{
+    "name": "ov7670 camera module",
+    "type": "camera Module",
+    "digital-pins": {
+        "id": [
+            "3.3V",
+            "SCL",
+            "VS",
+            "PLK",
+            "D7",
+            "D5",
+            "D3",
+            "D1",
+            "RET",
+            "GND",
+            "SDA",
+            "HS",
+            "XLK",
+            "D6",
+            "D4",
+            "D2",
+            "D0",
+            "PWDN"
+        ],
+        "reloc": [
+            {
+                "id": "3.3V",
+                "points": [
+                    50,
+                    58
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    50,
+                    80
+                ]
+            },
+            {
+                "id": "VS",
+                "points": [
+                    50,
+                    102
+                ]
+            },
+            {
+                "id": "PLK",
+                "points": [
+                    50,
+                    124
+                ]
+            },
+            {
+                "id": "D7",
+                "points": [
+                    50,
+                    146
+                ]
+            },
+            {
+                "id": "D5",
+                "points": [
+                    50,
+                    168
+                ]
+            },
+            {
+                "id": "D3",
+                "points": [
+                    50,
+                    189
+                ]
+            },
+            {
+                "id": "D1",
+                "points": [
+                    50,
+                    212
+                ]
+            },
+            {
+                "id": "RET",
+                "points": [
+                    50,
+                    233
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    72,
+                    59
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    72,
+                    80
+                ]
+            },
+            {
+                "id": "HS",
+                "points": [
+                    72,
+                    102
+                ]
+            },
+            {
+                "id": "XLK",
+                "points": [
+                    72,
+                    124
+                ]
+            },
+            {
+                "id": "D6",
+                "points": [
+                    72,
+                    146
+                ]
+            },
+            {
+                "id": "D4",
+                "points": [
+                    72,
+                    168
+                ]
+            },
+            {
+                "id": "D2",
+                "points": [
+                    72,
+                    189
+                ]
+            },
+            {
+                "id": "D0",
+                "points": [
+                    72,
+                    211
+                ]
+            },
+            {
+                "id": "PWDN",
+                "points": [
+                    72,
+                    234
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

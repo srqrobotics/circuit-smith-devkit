@@ -1,0 +1,45 @@
+{
+    "name": "Gas",
+    "type": "Sensor",
+    "digital-pins": {
+        "id": [
+            "AOUT",
+            "DOUT",
+            "GND",
+            "VCC"
+        ],
+        "reloc": [
+            {
+                "id": "AOUT",
+                "points": [
+                    444,
+                    48
+                ]
+            },
+            {
+                "id": "DOUT",
+                "points": [
+                    444,
+                    79
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    444,
+                    111
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    444,
+                    144
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

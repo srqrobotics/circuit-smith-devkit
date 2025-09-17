@@ -1,0 +1,55 @@
+{
+    "name": "KY 040 Rotary Encoder Module",
+    "type": "Encoder",
+    "digital-pins": {
+        "id": [
+            "CLK",
+            "DT",
+            "SW",
+            "VCC",
+            "GND"
+        ],
+        "reloc": [
+            {
+                "id": "CLK",
+                "points": [
+                    230,
+                    27
+                ]
+            },
+            {
+                "id": "DT",
+                "points": [
+                    230,
+                    53
+                ]
+            },
+            {
+                "id": "SW",
+                "points": [
+                    230,
+                    79
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    230,
+                    103
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    230,
+                    130
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "processor": "ATmega2560",
+        "clockSpeed": "16 MHz",
+        "voltage": "5V"
+    }
+}

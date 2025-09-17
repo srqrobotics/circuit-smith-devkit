@@ -1,0 +1,45 @@
+{
+    "name": "Soil Moisture Sensor Module",
+    "type": "Sensor Module",
+    "digital-pins": {
+        "id": [
+            "Analog_Out",
+            "Digital_Out",
+            "GND",
+            "VCC"
+        ],
+        "reloc": [
+            {
+                "id": "Analog_Out",
+                "points": [
+                    494,
+                    42
+                ]
+            },
+            {
+                "id": "Digital_Out",
+                "points": [
+                    494,
+                    69
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    494,
+                    97
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    494,
+                    127
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

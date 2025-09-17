@@ -1,0 +1,77 @@
+{
+    "name": "INA219 Current Sensor Module",
+    "type": "Sensor",
+    "digital-pins": {
+        "id": [
+            "VCC",
+            "GND",
+            "SCL",
+            "SDA",
+            "VIN-",
+            "VIN+",
+            "PWR_VIN-",
+            "PWR_VIN+"
+        ],
+        "reloc": [
+            {
+                "id": "U",
+                "points": [
+                    92,
+                    268
+                ]
+            },
+            {
+                "id": "6",
+                "points": [
+                    125,
+                    269
+                ]
+            },
+            {
+                "id": "S1",
+                "points": [
+                    163,
+                    269
+                ]
+            },
+            {
+                "id": "S",
+                "points": [
+                    197,
+                    269
+                ]
+            },
+            {
+                "id": "V",
+                "points": [
+                    233,
+                    270
+                ]
+            },
+            {
+                "id": "UN",
+                "points": [
+                    267,
+                    269
+                ]
+            },
+            {
+                "id": "V",
+                "points": [
+                    151,
+                    45
+                ]
+            },
+            {
+                "id": "_PIN",
+                "points": [
+                    199,
+                    45
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

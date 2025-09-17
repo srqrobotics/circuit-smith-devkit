@@ -1,0 +1,37 @@
+{
+    "name": "IR Receiver",
+    "type": "Sensor",
+    "digital-pins": {
+        "id": [
+            "GND",
+            "VCC",
+            "DAT"
+        ],
+        "reloc": [
+            {
+                "id": "GND",
+                "points": [
+                    3,
+                    57
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    3,
+                    85
+                ]
+            },
+            {
+                "id": "DAT",
+                "points": [
+                    3,
+                    112
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

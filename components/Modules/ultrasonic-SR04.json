@@ -1,0 +1,47 @@
+{
+    "name": "ultrasonic-SR04",
+    "type": "module",
+    "digital-pins": {
+        "id": [
+            "5V",
+            "TRIG",
+            "ECHO",
+            "GND"
+        ],
+        "reloc": [
+            {
+                "id": "5V",
+                "points": [
+                    189,
+                    240
+                ]
+            },
+            {
+                "id": "TRIG",
+                "points": [
+                    214,
+                    240
+                ]
+            },
+            {
+                "id": "ECHO",
+                "points": [
+                    240,
+                    240
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    265,
+                    240
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "Model": "HC_SR04",
+        "Communication": "UART",
+        "voltage": "5V"
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "name": "HC 05 BT Module",
+    "type": "Bluetooth Module",
+    "digital-pins": {
+        "id": [
+            "STATE",
+            "RXD",
+            "TXD",
+            "GND",
+            "VCC",
+            "EN"
+        ],
+        "reloc": [
+            {
+                "id": "STATE",
+                "points": [
+                    10,
+                    310
+                ]
+            },
+            {
+                "id": "RXD",
+                "points": [
+                    102,
+                    310
+                ]
+            },
+            {
+                "id": "TXD",
+                "points": [
+                    83,
+                    310
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    65,
+                    310
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    48,
+                    310
+                ]
+            },
+            {
+                "id": "EN",
+                "points": [
+                    29,
+                    310
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "name": "AS608 Optical Fingerprint Sensor",
+    "type": "sensor",
+    "digital-pins": {
+        "id": [
+            "NC",
+            "NC",
+            "GND",
+            "RX",
+            "TX",
+            "VCC"
+        ],
+        "reloc": [
+            {
+                "id": "NC",
+                "points": [
+                    18,
+                    118
+                ]
+            },
+            {
+                "id": "NC",
+                "points": [
+                    18,
+                    134
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    18,
+                    150
+                ]
+            },
+            {
+                "id": "RX",
+                "points": [
+                    18,
+                    165
+                ]
+            },
+            {
+                "id": "TX",
+                "points": [
+                    18,
+                    181
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    18,
+                    196
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "3.3V"
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "name": "MAX7219 Dot Matrix Display Module",
+    "type": "Display",
+    "digital-pins": {
+        "id": [
+            "V+_2",
+            "GND_2",
+            "DOUT_2",
+            "CS_2",
+            "CLK_2",
+            "V+_1",
+            "GND_1",
+            "DIN_1",
+            "CS_1",
+            "CLK_1"
+        ],
+        "reloc": [
+            {
+                "id": "V+_2",
+                "points": [
+                    2,
+                    38
+                ]
+            },
+            {
+                "id": "GND_2",
+                "points": [
+                    2,
+                    58
+                ]
+            },
+            {
+                "id": "DOUT_2",
+                "points": [
+                    2,
+                    78
+                ]
+            },
+            {
+                "id": "CS_2",
+                "points": [
+                    2,
+                    98
+                ]
+            },
+            {
+                "id": "CLK_2",
+                "points": [
+                    2,
+                    118
+                ]
+            },
+            {
+                "id": "V+_1",
+                "points": [
+                    693,
+                    38
+                ]
+            },
+            {
+                "id": "GND_1",
+                "points": [
+                    693,
+                    57
+                ]
+            },
+            {
+                "id": "DIN_1",
+                "points": [
+                    693,
+                    78
+                ]
+            },
+            {
+                "id": "CS_1",
+                "points": [
+                    694,
+                    98
+                ]
+            },
+            {
+                "id": "CLK_1",
+                "points": [
+                    693,
+                    118
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

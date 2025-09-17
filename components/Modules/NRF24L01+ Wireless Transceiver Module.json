@@ -1,0 +1,77 @@
+{
+    "name": "NRF24L01+ Wireless Transceiver Module",
+    "type": "Communication Module",
+    "digital-pins": {
+        "id": [
+            "GND",
+            "CE",
+            "SCK",
+            "MISO",
+            "VCC",
+            "CNS",
+            "MOSI",
+            "IRQ"
+        ],
+        "reloc": [
+            {
+                "id": "GND",
+                "points": [
+                    23,
+                    28
+                ]
+            },
+            {
+                "id": "CE",
+                "points": [
+                    23,
+                    74
+                ]
+            },
+            {
+                "id": "SCK",
+                "points": [
+                    23,
+                    120
+                ]
+            },
+            {
+                "id": "MISO",
+                "points": [
+                    23,
+                    166
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    69,
+                    28
+                ]
+            },
+            {
+                "id": "CNS",
+                "points": [
+                    69,
+                    74
+                ]
+            },
+            {
+                "id": "MOSI",
+                "points": [
+                    69,
+                    120
+                ]
+            },
+            {
+                "id": "IRQ",
+                "points": [
+                    69,
+                    166
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

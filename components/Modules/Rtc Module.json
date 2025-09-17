@@ -1,0 +1,95 @@
+{
+    "name": "Rtc Module",
+    "type": "Motor Driver",
+    "digital-pins": {
+        "id": [
+            "32K",
+            "SQW",
+            "SCL",
+            "SDA",
+            "V",
+            "GND",
+            "SCL",
+            "SDA",
+            "VCC",
+            "GND"
+        ],
+        "reloc": [
+            {
+                "id": "32K",
+                "points": [
+                    12,
+                    39
+                ]
+            },
+            {
+                "id": "SQW",
+                "points": [
+                    12,
+                    59
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    12,
+                    80
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    12,
+                    100
+                ]
+            },
+            {
+                "id": "V",
+                "points": [
+                    12,
+                    119
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    12,
+                    139
+                ]
+            },
+            {
+                "id": "SCL",
+                "points": [
+                    291,
+                    56
+                ]
+            },
+            {
+                "id": "SDA",
+                "points": [
+                    291,
+                    76
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    291,
+                    96
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    290,
+                    117
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "processor": "ATmega2560",
+        "clockSpeed": "16 MHz",
+        "voltage": "5V"
+    }
+}

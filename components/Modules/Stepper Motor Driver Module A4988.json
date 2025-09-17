@@ -1,0 +1,141 @@
+{
+    "name": "Stepper Motor Driver Module A4988",
+    "type": "Motor Driver",
+    "digital-pins": {
+        "id": [
+            "EN",
+            "MS1",
+            "MS2",
+            "MS3",
+            "RESET",
+            "SLEEP",
+            "STEP",
+            "DIR",
+            "VMOT",
+            "GND_2",
+            "2B",
+            "2A",
+            "1A",
+            "1B",
+            "VDD",
+            "GND_1"
+        ],
+        "reloc": [
+            {
+                "id": "EN",
+                "points": [
+                    25,
+                    27
+                ]
+            },
+            {
+                "id": "MS1",
+                "points": [
+                    25,
+                    76
+                ]
+            },
+            {
+                "id": "MS2",
+                "points": [
+                    25,
+                    126
+                ]
+            },
+            {
+                "id": "MS3",
+                "points": [
+                    25,
+                    175
+                ]
+            },
+            {
+                "id": "RESET",
+                "points": [
+                    25,
+                    225
+                ]
+            },
+            {
+                "id": "SLEEP",
+                "points": [
+                    25,
+                    274
+                ]
+            },
+            {
+                "id": "STEP",
+                "points": [
+                    25,
+                    324
+                ]
+            },
+            {
+                "id": "DIR",
+                "points": [
+                    25,
+                    374
+                ]
+            },
+            {
+                "id": "VMOT",
+                "points": [
+                    272,
+                    27
+                ]
+            },
+            {
+                "id": "GND_2",
+                "points": [
+                    272,
+                    76
+                ]
+            },
+            {
+                "id": "2B",
+                "points": [
+                    272,
+                    125
+                ]
+            },
+            {
+                "id": "2A",
+                "points": [
+                    272,
+                    175
+                ]
+            },
+            {
+                "id": "1A",
+                "points": [
+                    272,
+                    224
+                ]
+            },
+            {
+                "id": "1B",
+                "points": [
+                    272,
+                    274
+                ]
+            },
+            {
+                "id": "VDD",
+                "points": [
+                    272,
+                    324
+                ]
+            },
+            {
+                "id": "GND_1",
+                "points": [
+                    272,
+                    373
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

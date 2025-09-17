@@ -1,0 +1,53 @@
+{
+    "name": "RCWL 0516 Microwave Motion Sensor",
+    "type": "Motion Module",
+    "digital-pins": {
+        "id": [
+            "3.3V",
+            "GND",
+            "OUT",
+            "VIN",
+            "CDS"
+        ],
+        "reloc": [
+            {
+                "id": "3.3V",
+                "points": [
+                    49,
+                    176
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    49,
+                    143
+                ]
+            },
+            {
+                "id": "OUT",
+                "points": [
+                    49,
+                    111
+                ]
+            },
+            {
+                "id": "VIN",
+                "points": [
+                    49,
+                    78
+                ]
+            },
+            {
+                "id": "CDS",
+                "points": [
+                    49,
+                    45
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

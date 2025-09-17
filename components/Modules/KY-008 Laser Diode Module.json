@@ -1,0 +1,37 @@
+{
+    "name": "KY 008 Laser Diode Module",
+    "type": "Laser Driver",
+    "digital-pins": {
+        "id": [
+            "SIGNAL",
+            "VIN",
+            "GND"
+        ],
+        "reloc": [
+            {
+                "id": "SIGNAL",
+                "points": [
+                    48,
+                    246
+                ]
+            },
+            {
+                "id": "VIN",
+                "points": [
+                    73,
+                    246
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    97,
+                    246
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

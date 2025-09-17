@@ -1,0 +1,37 @@
+{
+    "name": "RF Transmitter Module (433 MHz)",
+    "type": "Communication Module",
+    "digital-pins": {
+        "id": [
+            "GND",
+            "VCC",
+            "DATA"
+        ],
+        "reloc": [
+            {
+                "id": "GND",
+                "points": [
+                    343,
+                    87
+                ]
+            },
+            {
+                "id": "VCC",
+                "points": [
+                    343,
+                    125
+                ]
+            },
+            {
+                "id": "DATA",
+                "points": [
+                    343,
+                    163
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

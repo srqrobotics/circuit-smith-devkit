@@ -1,0 +1,29 @@
+{
+    "name": "buzzer",
+    "type": "Sound Output",
+    "digital-pins": {
+        "id": [
+            "Minus",
+            "Plus"
+        ],
+        "reloc": [
+            {
+                "id": "Minus",
+                "points": [
+                    109,
+                    297
+                ]
+            },
+            {
+                "id": "Plus",
+                "points": [
+                    147,
+                    297
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}

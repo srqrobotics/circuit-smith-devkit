@@ -1,0 +1,61 @@
+{
+    "name": "Relay",
+    "type": "RELAY Module",
+    "digital-pins": {
+        "id": [
+            "VCC",
+            "GND",
+            "IN",
+            "NC",
+            "COMM",
+            "NO"
+        ],
+        "reloc": [
+            {
+                "id": "VCC",
+                "points": [
+                    2,
+                    43
+                ]
+            },
+            {
+                "id": "GND",
+                "points": [
+                    2,
+                    66
+                ]
+            },
+            {
+                "id": "IN",
+                "points": [
+                    2,
+                    89
+                ]
+            },
+            {
+                "id": "NC",
+                "points": [
+                    266,
+                    47
+                ]
+            },
+            {
+                "id": "COMM",
+                "points": [
+                    266,
+                    69
+                ]
+            },
+            {
+                "id": "NO",
+                "points": [
+                    266,
+                    92
+                ]
+            }
+        ]
+    },
+    "specs": {
+        "voltage": "5V"
+    }
+}
