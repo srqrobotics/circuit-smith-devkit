@@ -58,16 +58,28 @@ def resize_image_and_adjust_coordinates(png_path, json_path, scale_ratio, output
     print(f"Updated JSON saved to: {output_json_path}")
 
 
-if __name__ == '__main__':
-    device = "servo-SG90"
-    image_path = f"ref/{device}.png"
-    json_path = f"ref/{device}.json"
+def get_devices_from_folder(folder_path):
+    # List all files in the folder
+    files = os.listdir(folder_path)
 
-    # grid_divisions = int(input("Enter number of grid divisions: "))
+    # Filter files to get only .json and .png files
+    json_files = {f.split('.')[0] for f in files if f.endswith('.json')}
+    png_files = {f.split('.')[0] for f in files if f.endswith('.png')}
+
+    # Find common device names (i.e., files that have both .json and .png)
+    devices = json_files.intersection(png_files)
+
+    return devices
+
+
+def process_device(device, folder_path):
+    image_path = f"{folder_path}/{device}.png"
+    json_path = f"{folder_path}/{device}.json"
+
     grid_divisions = 10
     show_image_with_grid(image_path, grid_divisions)
 
-    scale_ratio = float(input("Enter scale ratio: "))
+    scale_ratio = float(input(f"Enter scale ratio for {device}: "))
     resize_image_and_adjust_coordinates(
         image_path,
         json_path,
@@ -75,3 +87,12 @@ if __name__ == '__main__':
         f"dev-boards/{device}.png",
         f"dev-boards/{device}.json"
     )
+
+
+if __name__ == '__main__':
+    folder_path = "ref"  # Folder where .json and .png files are located
+
+    devices = get_devices_from_folder(folder_path)
+
+    for device in devices:
+        process_device(device, folder_path)
